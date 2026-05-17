@@ -19,6 +19,7 @@
       "description": "Port where Spokenly's MCP server listens (default 51089)",
       "type": "textfield",
       "default": "51089",
+      "placeholder": "51089",
       "required": false
     },
     {
