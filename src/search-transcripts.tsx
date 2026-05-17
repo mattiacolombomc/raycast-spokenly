@@ -141,6 +141,18 @@ export default function SearchTranscripts() {
                     shortcut={{ modifiers: ["cmd"], key: "o" }}
                     onAction={() => handleRevealRecording(entry)}
                   />
+                  <Action.CopyToClipboard
+                    title="Copy Recording File"
+                    icon={Icon.Document}
+                    content={{ file: entry.audioPath }}
+                    shortcut={{ modifiers: ["cmd", "shift"], key: "c" }}
+                  />
+                  <Action.CopyToClipboard
+                    title="Copy Recording Path"
+                    icon={Icon.Link}
+                    content={entry.audioPath}
+                    shortcut={{ modifiers: ["cmd", "opt"], key: "c" }}
+                  />
                   <Action.ShowInFinder
                     title="Reveal JSON in Finder"
                     path={entry.jsonPath}
