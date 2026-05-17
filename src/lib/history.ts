@@ -105,9 +105,9 @@ export function parseEntry(jsonPath: string): HistoryEntry | null {
   const transcription = r.transcriptionData as
     | Record<string, unknown>
     | undefined;
-  const segments = (transcription?.segments as
-    | Array<Record<string, unknown>>
-    | undefined) ?? [];
+  const segments =
+    (transcription?.segments as Array<Record<string, unknown>> | undefined) ??
+    [];
   const text = segments
     .map((s) => (s.text as string) ?? "")
     .filter(Boolean)

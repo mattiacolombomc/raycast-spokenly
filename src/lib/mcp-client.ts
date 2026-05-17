@@ -95,5 +95,9 @@ export async function transcribeFile(
   port: number = DEFAULT_MCP_PORT,
 ): Promise<string> {
   await ensureRunning(port);
-  return callTool("transcribe_file", args as unknown as Record<string, unknown>, port);
+  return callTool(
+    "transcribe_file",
+    args as unknown as Record<string, unknown>,
+    port,
+  );
 }

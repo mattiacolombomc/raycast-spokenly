@@ -131,7 +131,10 @@ export default function SearchTranscripts() {
                       <Action.Paste
                         title="Paste Transcript"
                         content={entry.text}
-                        shortcut={{ modifiers: ["cmd", "shift"], key: "return" }}
+                        shortcut={{
+                          modifiers: ["cmd", "shift"],
+                          key: "return",
+                        }}
                       />
                     </>
                   )}

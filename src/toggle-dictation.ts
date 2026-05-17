@@ -1,9 +1,4 @@
-import {
-  getPreferenceValues,
-  showHUD,
-  showToast,
-  Toast,
-} from "@raycast/api";
+import { getPreferenceValues, showHUD, showToast, Toast } from "@raycast/api";
 import { tryReadJSONPref } from "./lib/plist";
 import {
   buildStartURL,

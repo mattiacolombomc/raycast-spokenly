@@ -60,10 +60,7 @@ export default function RunQuickCommand() {
   }
 
   return (
-    <List
-      isLoading={isLoading}
-      searchBarPlaceholder="Search quick commands..."
-    >
+    <List isLoading={isLoading} searchBarPlaceholder="Search quick commands...">
       {commands.length === 0 && !isLoading ? (
         <List.EmptyView
           title="No Quick Commands"
@@ -88,7 +85,10 @@ export default function RunQuickCommand() {
                   icon={Icon.Play}
                   onAction={() => handleRun(qc)}
                 />
-                <Action.CopyToClipboard title="Copy Quick Command Id" content={qc.id} />
+                <Action.CopyToClipboard
+                  title="Copy Quick Command Id"
+                  content={qc.id}
+                />
               </ActionPanel>
             }
           />

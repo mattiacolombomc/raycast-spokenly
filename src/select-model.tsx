@@ -50,7 +50,10 @@ export default function SelectModel() {
   }
 
   return (
-    <List isLoading={isLoading} searchBarPlaceholder="Search dictation models...">
+    <List
+      isLoading={isLoading}
+      searchBarPlaceholder="Search dictation models..."
+    >
       {models.map((model) => {
         const accessories: List.Item.Accessory[] = [];
         if (!model.local) accessories.push({ tag: "cloud" });
@@ -71,7 +74,10 @@ export default function SelectModel() {
                   icon={Icon.Checkmark}
                   onAction={() => handleSelect(model)}
                 />
-                <Action.CopyToClipboard title="Copy Model Id" content={model.id} />
+                <Action.CopyToClipboard
+                  title="Copy Model Id"
+                  content={model.id}
+                />
               </ActionPanel>
             }
           />

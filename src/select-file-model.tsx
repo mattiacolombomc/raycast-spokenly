@@ -76,7 +76,10 @@ export default function SelectFileModel() {
                   icon={Icon.Checkmark}
                   onAction={() => handleSelect(model)}
                 />
-                <Action.CopyToClipboard title="Copy Model Id" content={model.id} />
+                <Action.CopyToClipboard
+                  title="Copy Model Id"
+                  content={model.id}
+                />
               </ActionPanel>
             }
           />

@@ -36,7 +36,9 @@ export function describeShortcut(keys: ShortcutKeys): string[] {
 export async function simulateShortcut(keys: ShortcutKeys): Promise<void> {
   const mods = describeShortcut(keys);
   const using =
-    mods.length > 0 ? ` using {${mods.map((m) => `${m} down`).join(", ")}}` : "";
+    mods.length > 0
+      ? ` using {${mods.map((m) => `${m} down`).join(", ")}}`
+      : "";
   const script = `tell application "System Events" to key code ${keys.keyCode}${using}`;
   await execa("osascript", ["-e", script]);
 }
